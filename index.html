@@ -15,19 +15,33 @@
         <form action="results.html" method="get"> <!-- TODO: Set Action and Method Properties -->
             <div>
                 <!-- Firstname Input -->
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <label for="firstname">Your First Name</label><span class="required-field">*</span>
+
+                <input type="text" id="firstname" name="firstname" maxlength="35" minlength="2">
                 <!-- Lastname input  -->
-                <label for="lastname">Your Last Name</label>
-                <input  type="text" id="lastname" name="lastname">
+                <label for="lastname">Your Last Name</label><span class="required-field">*</span>
+
+                <input  type="text" id="lastname" name="lastname" maxlength="35" minlength="2">
+
+                <label for="pwd">Your Secret Code</label><span class="required-field">*</span>
+
+                <input type="password" id="pwd" name="pwd" title="6 Alphanumeric Character Passcode"  pattern="[A-Za-z0-9]{6}" required>
             </div>
+            
+            <fieldset>
+                <label for="age">Your age</label>
+                <input type="number" name="age" id="age" min="21" max="120">
+                <h5>You must be 21 or older to enter Contest</h5>
+            </fieldset>
+            
             <fieldset>
             <div>
                 <legend>Your Contact Info</legend>
             </div>
             <!-- Email Address input -->
             <div>
-                <label for="Email">Your Email</label>
+                <label for="Email">Your Email</label><span class="required-field">*</span>
+
                 <input type="text" id="Email" name="Email">
             </div>
             
@@ -100,7 +114,7 @@
                 <!-- Zip Code Input  -->
                 <div>
                     <label for="Zip">Your Zip Code</label>
-                    <input type="text" name="Zip" id="Zip">
+                    <input type="text" name="Zip" id="Zip" pattern="[0-9]{5}" title="5-Digit US ZIP Code.">
                 </div>
         </fieldset> 
         
